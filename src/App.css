@@ -1,0 +1,114 @@
+:root {
+  --background-color: #fff;
+  --btn-bg-color: #0987f2;
+  --btn-text-color: #fff;
+  --project-card-bg: #ffffff00;
+  /* --text-color: #333; */
+  --text-color: #1f2328;
+  --form-text-color: #555;
+  --footer-text-color: #888;
+}
+
+[data-theme="dark"] {
+  --background-color: #22272e;
+  --btn-bg-color: #e7e7e7;
+  --btn-text-color: #222;
+  --project-card-bg: #e7e7e7;
+  --text-color: #e7e7e7;
+  --form-text-color: #e7e7e7;
+  --footer-text-color: #bbb;
+}
+
+body {
+  background-color: var(--background-color);
+  display: flex;
+  justify-content: center;
+  margin: 0 auto 3.75rem; /* 60px */
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  gap: 3.75rem;
+}
+
+h1,
+h2,
+h3,
+p {
+  color: var(--text-color);
+  margin: 0;
+  padding: 0;
+}
+
+h2,
+h3,
+p {
+  font-family: "Roboto Mono", monospace;
+}
+
+h1,
+h2 {
+  text-transform: uppercase;
+}
+
+h2,
+h3 {
+  font-size: 1.25rem; /* 20px */
+}
+
+h1 {
+  font-family: "Rubik", sans-serif;
+  font-size: 2rem; /* 32px */
+}
+
+p {
+  font-size: 1rem; /* 16px */
+  font-weight: 300;
+}
+
+.sectionTitle {
+  margin-bottom: 1.875rem; /* 30px */
+}
+
+.hover {
+  cursor: pointer;
+}
+
+/* 768px */
+@media (width >= 48rem) {
+  #root {
+    gap: 6.25rem; /* 100px */
+  }
+
+  h1 {
+    font-size: 2.5rem; /* 40px */
+  }
+
+  h2,
+  h3 {
+    font-size: 1.5rem;
+  }
+  p {
+    font-size: 1.25rem;
+  }
+
+  .sectionTitle {
+    margin-bottom: 3.75rem;
+  }
+
+  /* 1400px */
+  @media (width >= 87.5rem) {
+    #root {
+      gap: 12.5rem; /* 200px */
+    }
+
+    h1 {
+      font-size: 3rem; /* 48px */
+    }
+
+    .sectionTitle {
+      margin-bottom: 4.69rem;
+    }
+  }
+}

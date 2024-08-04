@@ -1,0 +1,79 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.875rem;
+}
+
+textarea,
+input:not([type="submit"]) {
+  height: 3.125rem;
+  padding-left: 1rem;
+  width: 15.625rem;
+}
+
+textarea {
+  padding-top: 1rem;
+  resize: none;
+  height: 15.625rem;
+}
+
+input,
+textarea {
+  box-sizing: border-box;
+  border-radius: 1.25rem;
+  border: #888 1px solid;
+  justify-self: center;
+  background-color: var(--background-color);
+  color: var(--form-text-color);
+}
+
+::placeholder {
+  color: var(--form-text-color);
+}
+
+input[type="submit"] {
+  background-color: var(--btn-bg-color);
+  color: var(--btn-text-color);
+  border: none;
+  border-radius: 1.25rem;
+  width: 7.875rem;
+  height: 3.125rem;
+  font-size: 1.25rem;
+  font-weight: bold;
+  box-shadow: 0 0.25rem 0.25rem rgba(0, 0, 0, 0.25);
+  transition: box-shadow 200ms ease-in-out, transform 200ms ease-in-out;
+  margin: auto;
+}
+
+input[type="submit"]:hover {
+  transform: scale(1.05);
+}
+
+input[type="submit"]:active {
+  transform: translateY(2px);
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.25);
+}
+
+@media (width >= 48rem) {
+  textarea,
+  input:not([type="submit"]) {
+    width: 37.5rem;
+    font-size: 1.25rem;
+  }
+  form {
+    gap: 2.5rem;
+  }
+}
+
+@media (width >= 87.5rem) {
+  textarea,
+  input:not([type="submit"]) {
+    width: 48rem;
+  }
+}
